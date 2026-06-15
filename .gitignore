@@ -1,31 +1,26 @@
-# ignore everything
 *
-
-# allow gitignore
 !.gitignore
-
-# allow only required folders
 !src/
 !videos/
 
-# ignore unwanted packages explicitly
+# ignore unwanted packages
 src/robot_description/
 src/robot_controller/
 
-# allow only required cpp files
-src/robot_cpp/*
+# cpp
+src/robot_cpp/
 !src/robot_cpp/src/
 !src/robot_cpp/src/simple_service_client.cpp
 !src/robot_cpp/src/simple_service_server.cpp
 
-# allow only required py files
-src/robot_py/*
+# python
+src/robot_py/
 !src/robot_py/robot_py/
 !src/robot_py/robot_py/simple_service_client.py
 !src/robot_py/robot_py/simple_service_server.py
 
-# allow only required srv file
-src/robot_msgs/*
+# msgs
+src/robot_msgs/
 !src/robot_msgs/srv/
 !src/robot_msgs/srv/AddTwoInts.srv
 
