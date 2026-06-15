@@ -1,0 +1,39 @@
+# Ignore everything
+*
+
+# Allow gitignore itself
+!.gitignore
+
+# Allow only required folders
+!robot_cpp/
+!robot_py/
+!robot_msgs/
+!videos/
+
+# Explicitly ignore unwanted ROS packages
+robot_description/
+robot_controller/
+
+# ---------------- robot_cpp ----------------
+robot_cpp/*
+!robot_cpp/simple_service_client.cpp
+!robot_cpp/simple_service_server.cpp
+
+# ---------------- robot_py ----------------
+robot_py/*
+!robot_py/simple_service_client.py
+!robot_py/simple_service_server.py
+
+# ---------------- robot_msgs ----------------
+robot_msgs/*
+!robot_msgs/AddTwoInts.srv
+
+# ---------------- videos ----------------
+videos/*
+!videos/Service\ Client.webm
+
+# Optional ROS build artifacts (extra safety)
+build/
+install/
+log/
+.vscode/
