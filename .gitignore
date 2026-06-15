@@ -1,35 +1,36 @@
-*
-!.gitignore
-!src/
-!videos/
 
-# ignore unwanted packages
-src/robot_description/
-src/robot_controller/
-
-# cpp
-src/robot_cpp/
-!src/robot_cpp/src/
-!src/robot_cpp/src/simple_service_client.cpp
-!src/robot_cpp/src/simple_service_server.cpp
-
-# python
-src/robot_py/
-!src/robot_py/robot_py/
-!src/robot_py/robot_py/simple_service_client.py
-!src/robot_py/robot_py/simple_service_server.py
-
-# msgs
-src/robot_msgs/
-!src/robot_msgs/srv/
-!src/robot_msgs/srv/AddTwoInts.srv
-
-# videos
-videos/*
-!videos/Service Client.webm
-
-# ros junk
+# ================= ROS2 BUILD =================
 build/
 install/
 log/
+.colcon/
+
+# ================= IDE =================
 .vscode/
+
+# ================= SYSTEM =================
+*~
+.DS_Store
+
+# ================= PYTHON CACHE =================
+__pycache__/
+*.pyc
+
+# ================= IGNORE UNNEEDED PACKAGES =================
+src/robot_controller/
+src/robot_description/
+
+# ================= IGNORE ONLY UNUSED SOURCES =================
+
+# CPP extras (keep service files)
+src/robot_cpp/src/simple_parameter.cpp
+src/robot_cpp/src/simple_tf_kinematics.cpp
+src/robot_cpp/src/simple_turtlesim_kinematics.cpp
+
+# PY extras (keep service files)
+src/robot_py/robot_py/simple_parameters.py
+src/robot_py/robot_py/simple_tf_kinematics.py
+src/robot_py/robot_py/simple_turtlesim_kinematics.py
+src/robot_py/test/
+src/robot_py/resource/
+
